@@ -2,8 +2,9 @@ FROM ubuntu:bionic as builder
 RUN apt-get update && apt-get install -y \
     build-essential \
     git \
-    libnuma-dev \
-  && rm -rf /var/lib/apt/lists/*
+    libnuma-dev 
+  #   libnuma-dev \
+  # && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir /code &&cd /code \ 
 && git clone --depth=1  https://gitee.com/lovewinner/rt-app.git 
