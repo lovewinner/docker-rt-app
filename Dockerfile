@@ -1,4 +1,4 @@
-FROM --platform=$TARGETPLATFORM ubuntu:bionic as builder
+FROM ubuntu:bionic as builder
 RUN apt-get update && apt-get install -y \
     git \
   && rm -rf /var/lib/apt/lists/*
